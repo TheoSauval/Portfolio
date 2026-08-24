@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theo Sauval — Creative Developer</title>
+  <meta name="description" content="Theo Sauval — Creative developer & visual designer based in Lille. Building fast, expressive web experiences.">
+  <meta property="og:title" content="Theo Sauval — Creative Developer">
+  <meta property="og:description" content="Creative developer & visual designer based in Lille. Web development, UI design, GSAP animations.">
+  <meta property="og:image" content="https://theosauval.com/assets/theo.jpeg">
+  <meta property="og:url" content="https://theosauval.com">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://theosauval.com">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="js/menu.js" defer></script>
+</head>
+
+<body>
+
+  <div id="loader">
+    <div class="loader-top">
+      <span id="loader-num">(0)</span>
+      <span id="loader-time"></span>
+    </div>
+    <div class="loader-bottom">
+      <span class="loader-name">Theo Sauval</span>
+      <span class="loader-role">Creative Developer</span>
+    </div>
+  </div>
+
+    <nav>
+      <div class="name">
+        Theo Sauval
+      </div>
+      <div class="year">
+        [2026]
+      </div>
+      <div id="lang-toggle" class="nav-link">FR</div>
+      <div id="menu-trigger" class="nav-link">
+        Menu
+      </div>
+    </nav>
+    <div id="expanded-menu">
+      <div id="sub-menu" class="content">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <div class="mail_insta">
+          <a href="mailto:theo@sauval.dev">theo@sauval.dev</a>
+          <a href="https://www.instagram.com/thvsl__/" target="_blank">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <!-- <video id="bg-video" src="assets/fomula1.mp4" muted playsinline preload="auto"></video> -->
+
+    <div class="hero">
+      <!-- <span class="hero-tag">[ THEO SAUVAL ]</span> -->
+      <h1 class="title">CREATIVE DEVELOPER</h1>
+      <div class="hero-bottom">
+        <div class="hero-services">
+          <p>/ WEB DEVELOPMENT</p>
+          <p>/ VISUAL DESIGN</p>
+          <p>/ F1 ENTHUSIAST</p>
+        </div>
+<span class="hero-location">BASED — IN — LILLE</span>
+      </div>
+      <p class="hero-bio">5TH YEAR COMPUTER SCIENCE STUDENT</p>
+    </div>
+    <section>
+      <div class="content-about">
+        <h2>Welcome to the portfolio of <em>Theo Sauval</em></h2>
+        <p>visual designer, <em>athlete</em> and <span class="hover-trigger" data-video="assets/videoF1.mp4">F1</span> fanatic</p>
+        <div class="texte_presentation">
+          <h4>
+            5th year computer science student <span class="hover-trigger" data-image="assets/ynovcampus_logo.jpg">@ Ynov Campus — Based in Lille</span>
+          </h4>
+          <p>
+            Passionate about web development and visual content creation,
+            currently apprenticing at Lacier as a full-stack web developer.
+          </p>
+        </div>
+        <div class="bottom-bar">
+          <span>[NICE TO MEET YOU]</span>
+          <span>[SCROLL DOWN]</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects-section">
+      <div class="projects-header">
+        <h2>PROJECTS</h2>
+        <span>(03)</span>
+      </div>
+
+      <div class="project-item" style="z-index: 1;">
+        <div class="project-left">
+          <span class="project-num">(01)</span>
+          <h3>Votre<br>Appart<br>Neuf</h3>
+          <div class="project-meta">
+            <span class="project-tag">Immobilier</span>
+            <span class="project-tag">Full-stack</span>
+          </div>
+          <p>Real estate platform for new property acquisition — design and development of a showcase website with programme listings, appointment booking, and content management.</p>
+          <a href="project-van.html" class="project-link">Case study →</a>
+        </div>
+        <div class="project-right">
+          <img src="assets/logo_orange.png" alt="Votre Appart Neuf">
+        </div>
+      </div>
+
+      <div class="project-item" style="z-index: 2;">
+        <div class="project-left">
+          <span class="project-num">(02)</span>
+          <h3>Plaques<br>Enseignes</h3>
+          <div class="project-meta">
+            <span class="project-tag">E-commerce</span>
+            <span class="project-tag">Full-stack</span>
+          </div>
+          <p>Custom signage manufacturer — development of an e-commerce platform with a live product configurator, laser engraving options, and order management. 10,000+ clients served.</p>
+          <a href="project-plaques.html" class="project-link">Case study →</a>
+        </div>
+        <div class="project-right">
+          <img src="assets/Logo.svg" alt="Plaques Enseignes">
+        </div>
+      </div>
+      <div class="project-item project-item--teaser" style="z-index: 3;">
+        <h3 class="project-teaser-title">More<br>coming soon</h3>
+      </div>
+
+    </section>
+
+    <section class="services-section">
+      <div class="services-header">
+        <span>SERVICES</span>
+      </div>
+
+      <ul class="services-list">
+        <li class="service-item active" data-image="assets/image.png">
+          <h3>Direction artistique</h3>
+        </li>
+        <li class="service-item" data-image="assets/image.png">
+          <h3>Design UI</h3>
+        </li>
+        <li class="service-item" data-video="assets/figma.webm">
+          <h3>Maquettes Figma</h3>
+        </li>
+        <li class="service-item" data-video="assets/gsap.webm">
+          <h3>Animations GSAP</h3>
+        </li>
+        
+      </ul>
+    </section>
+
+    <section class="about-section">
+      <div class="about-name">
+        <span class="about-letter">T</span>
+        <span class="about-letter">H</span>
+        <span class="about-creative">CREATIVE DEV</span>
+        <span class="about-letter">E</span>
+        <span class="about-letter">O</span>
+      </div>
+      <div class="about-bio-section">
+        <span class="about-bio-label">(ABOUT)</span>
+        <h2 class="about-bio-title">What happens when a CS student becomes obsessed with making the web feel alive?</h2>
+        <div class="about-bio-content">
+          <div class="about-bio-text">
+            <p>Things move, and they move fast.</p>
+            <p>Theo never settled for just building things that work. From his first lines of code to crafting production-ready platforms serving thousands of users, he's always been driven by the intersection of engineering precision and visual impact.</p>
+            <p>Five years of computer science sharpened his instincts for systems and structure. But it's the creative side — the animations, the interfaces, the moments that make someone pause and think "how did they do that" — that keeps him going.</p>
+            <p>Today he builds for brands and businesses that care about craft. Fast, clean, expressive — and always with a bit of F1 energy behind it.</p>
+          </div>
+          <div class="about-bio-image">
+            <div class="polaroid">
+              <img src="assets/theo.jpeg" alt="Theo Sauval">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-glow"></div>
+      <div class="footer-inner">
+        <div class="footer-top">
+          <h2 class="footer-headline">AVAILABLE FOR<br>NEW PROJECTS</h2>
+          <nav class="footer-nav">
+            <span class="footer-col-label">MENU</span>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+          </nav>
+          <div class="footer-socials">
+            <span class="footer-col-label">SOCIALS</span>
+            <a href="mailto:theo@sauval.dev">Email</a>
+            <a href="https://www.instagram.com/thvsl__/" target="_blank">Instagram</a>
+            <a href="https://www.linkedin.com/in/theo-sauval-402884244/" target="_blank">LinkedIn</a>
+          <a href="https://github.com/TheoSauval" target="_blank">GitHub</a>
+          </div>
+        </div>
+        <div class="footer-meta">
+          <span>© 2026 THEO SAUVAL</span>
+          <span>LILLE — FR</span>
+        </div>
+      </div>
+      <div class="footer-wordmark">THEO SAUVAL</div>
+    </footer>
+
+    <div id="service-preview">
+      <img id="service-preview-img" src="" alt="">
+      <video id="service-preview-vid" muted playsinline loop></video>
+    </div>
+
+    <div id="lang-overlay"></div>
+
+    <div id="cursor"></div>
+    <div id="cursor-image">
+      <img id="cursor-img" src="" alt="">
+      <video id="cursor-vid" muted playsinline></video>
+    </div>
+  <script src="js/loader.js"></script>
+  <script src="js/effects.js" defer></script>
+  <script src="js/lang.js" defer></script>
+</body>
+
+</html>

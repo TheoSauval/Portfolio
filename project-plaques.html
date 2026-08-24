@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plaques Enseignes — Theo Sauval</title>
+  <meta name="description" content="Case study — Plaques Enseignes, e-commerce platform with live product configurator. Design & full-stack development by Theo Sauval.">
+  <meta property="og:title" content="Plaques Enseignes — Theo Sauval">
+  <meta property="og:description" content="E-commerce platform with a live product configurator, laser engraving options, and order management. 10,000+ clients served.">
+  <meta property="og:image" content="https://theosauval.com/assets/Logo.svg">
+  <meta property="og:url" content="https://theosauval.com/project-plaques">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://theosauval.com/project-plaques">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .case-hero,
+    .case-section,
+    .case-screenshot,
+    .case-screenshot-grid,
+    .case-cta {
+      position: relative;
+      z-index: 1;
+      background-color: #edeae7;
+    }
+
+    .case-hero {
+      padding: 18vh 4vw 8vh;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    .case-hero-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 4rem;
+    }
+    .case-page-label {
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      opacity: 0.5;
+      text-transform: uppercase;
+    }
+    .case-tags {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .case-tag {
+      font-size: 0.65rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border: 1px solid rgba(0,0,0,0.2);
+      padding: 0.3rem 0.7rem;
+      border-radius: 100px;
+    }
+    .case-hero-title {
+      font-size: clamp(3.5rem, 10vw, 10rem);
+      font-weight: 900;
+      line-height: 0.9;
+      letter-spacing: -2px;
+      text-transform: uppercase;
+      margin-bottom: 3rem;
+    }
+    .case-hero-title em {
+      font-style: italic;
+      font-weight: 300;
+    }
+    .case-hero-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .case-hero-desc {
+      font-size: clamp(1rem, 1.5vw, 1.2rem);
+      opacity: 0.7;
+      max-width: 560px;
+      line-height: 1.6;
+    }
+    .case-hero-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      text-align: right;
+    }
+    .case-meta-line {
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      opacity: 0.4;
+      text-transform: uppercase;
+    }
+    .case-meta-val {
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    /* Sections */
+    .case-section {
+      padding: 6rem 4vw;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+    .case-section-label {
+      font-size: 0.65rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      opacity: 0.4;
+      margin-bottom: 2.5rem;
+      display: block;
+    }
+    .case-section-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .case-section-title {
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+    }
+    .case-section-body {
+      font-size: 1rem;
+      line-height: 1.8;
+      opacity: 0.75;
+      max-width: 640px;
+    }
+    .case-section-body p + p {
+      margin-top: 1.2rem;
+    }
+
+    /* Stat highlight */
+    .case-stat {
+      display: inline-block;
+      font-size: clamp(3rem, 6vw, 5rem);
+      font-weight: 900;
+      letter-spacing: -2px;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .case-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+      padding-top: 3rem;
+      border-top: 1px solid rgba(0,0,0,0.1);
+    }
+    .case-stat-block { }
+    .case-stat-label {
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      opacity: 0.4;
+      display: block;
+      margin-top: 0.3rem;
+    }
+
+    /* Screenshot */
+    .case-screenshot {
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: rgba(0,0,0,0.05);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      margin: 4rem 0;
+    }
+    .case-screenshot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .case-screenshot-placeholder {
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      opacity: 0.2;
+    }
+    .case-screenshot-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin: 4rem 0;
+    }
+    .case-screenshot-grid .case-screenshot {
+      margin: 0;
+    }
+
+    /* Features */
+    .case-features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .case-feature {
+      border-top: 1px solid rgba(0,0,0,0.12);
+      padding-top: 1.5rem;
+    }
+    .case-feature-num {
+      font-size: 0.65rem;
+      letter-spacing: 2px;
+      opacity: 0.3;
+      display: block;
+      margin-bottom: 0.8rem;
+    }
+    .case-feature-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .case-feature-desc {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      opacity: 0.65;
+    }
+
+    /* Stack */
+    .case-stack-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      margin-top: 3rem;
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+    .case-stack-item {
+      padding: 1.5rem;
+      border-right: 1px solid rgba(0,0,0,0.1);
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    .case-stack-item:nth-child(4n) { border-right: none; }
+    .case-stack-item-name {
+      font-size: 0.95rem;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+    .case-stack-item-role {
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      opacity: 0.4;
+    }
+
+    /* CTA */
+    .case-cta {
+      padding: 8rem 4vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 100vh;
+    }
+    .case-cta-title {
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -1px;
+      text-transform: uppercase;
+    }
+    .case-cta-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: flex-end;
+    }
+    .case-cta-link {
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-decoration: none;
+      color: inherit;
+      border-bottom: 1px solid currentColor;
+      padding-bottom: 2px;
+      transition: opacity 0.3s;
+    }
+    .case-cta-link:hover { opacity: 0.5; }
+    .case-back {
+      opacity: 0.4;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+    }
+
+    @media (max-width: 1024px) {
+      .case-hero { padding: 14vh 2.5rem 6vh; }
+      .case-hero-top { margin-bottom: 3rem; }
+      .case-section { padding: 5rem 2.5rem; }
+      .case-cta { padding: 6rem 2.5rem; }
+      .case-features { grid-template-columns: repeat(2, 1fr); }
+      .case-stats { grid-template-columns: repeat(2, 1fr); gap: 2rem 1.5rem; }
+      .case-stack-grid { grid-template-columns: repeat(3, 1fr); }
+      .case-stack-item:nth-child(4n) { border-right: 1px solid rgba(0,0,0,0.1); }
+      .case-stack-item:nth-child(3n) { border-right: none; }
+    }
+
+    @media (max-width: 768px) {
+      .case-hero { padding: 10vh 1.2rem 4vh; }
+      .case-hero-top { flex-direction: column; align-items: flex-start; gap: 1rem; margin-bottom: 2.5rem; }
+      .case-tags { flex-wrap: wrap; }
+      .case-section { padding: 4rem 1.2rem; }
+      .case-section-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .case-features { grid-template-columns: 1fr; }
+      .case-stats { grid-template-columns: 1fr; }
+      .case-stack-grid { grid-template-columns: repeat(2, 1fr); }
+      .case-stack-item { padding: 1rem; }
+      .case-stack-item:nth-child(4n) { border-right: 1px solid rgba(0,0,0,0.1); }
+      .case-stack-item:nth-child(2n) { border-right: none; }
+      .case-screenshot-grid { grid-template-columns: 1fr; }
+      .case-hero-meta { text-align: left; }
+      .case-cta { padding: 5rem 1.2rem; flex-direction: column; align-items: flex-start; }
+      .case-cta-links { align-items: flex-start; }
+    }
+
+    @media (max-width: 480px) {
+      .case-hero { padding: 8vh 1rem 3rem; }
+      .case-hero-title { letter-spacing: -1px; }
+      .case-section { padding: 3rem 1rem; }
+      .case-section-title { font-size: clamp(1.5rem, 7vw, 2rem); }
+      .case-cta { padding: 4rem 1rem; }
+      .case-stack-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="js/menu.js" defer></script>
+</head>
+
+<body>
+
+  <div id="loader">
+    <div class="loader-top">
+      <span id="loader-num">(0)</span>
+      <span id="loader-time"></span>
+    </div>
+    <div class="loader-bottom">
+      <span class="loader-name">Theo Sauval</span>
+      <span class="loader-role">Creative Developer</span>
+    </div>
+  </div>
+
+  <nav>
+    <div class="name">Theo Sauval</div>
+    <div class="year">[2026]</div>
+    <div id="lang-toggle" class="nav-link">FR</div>
+    <div id="menu-trigger" class="nav-link">Menu</div>
+  </nav>
+
+  <div id="expanded-menu">
+    <div id="sub-menu" class="content">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <div class="mail_insta">
+        <a href="mailto:theo@sauval.dev">theo@sauval.dev</a>
+        <a href="https://www.instagram.com/thvsl__/" target="_blank">Instagram</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <div class="case-hero">
+    <div class="case-hero-top">
+      <span class="case-page-label">(02 / 02) — Project</span>
+      <div class="case-tags">
+        <span class="case-tag">E-commerce</span>
+        <span class="case-tag">Full-stack</span>
+        <span class="case-tag">Configurateur</span>
+      </div>
+    </div>
+    <h1 class="case-hero-title">Plaques<br><em>Enseignes</em></h1>
+    <div class="case-hero-bottom">
+      <p class="case-hero-desc" data-lang-key="plaquesHeroDesc">Custom signage manufacturer — e-commerce platform with a live product configurator, laser engraving options, and order management. 10,000+ clients served.</p>
+      <div class="case-hero-meta">
+        <span class="case-meta-line" data-lang-key="csMetaYear">Year</span>
+        <span class="case-meta-val">2023 — 2024</span>
+        <span class="case-meta-line" style="margin-top:1rem;" data-lang-key="csMetaRole">Role</span>
+        <span class="case-meta-val">Design & Dev</span>
+        <span class="case-meta-line" style="margin-top:1rem;" data-lang-key="csMetaClient">Client</span>
+        <span class="case-meta-val">Lacier</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Screenshot principale -->
+  <div class="case-screenshot" style="margin: 0; border-radius: 0; aspect-ratio: 21/9;">
+    <img src="assets/Logo.svg" alt="Plaques Enseignes" style="object-fit: contain; padding: 4rem; background: #1a1a1a;">
+  </div>
+
+  <!-- Overview + Stats -->
+  <div class="case-section">
+    <span class="case-section-label" data-lang-key="csLabel1">(01) — Overview</span>
+    <div class="case-section-grid">
+      <h2 class="case-section-title" data-lang-key="csBrief">The brief</h2>
+      <div class="case-section-body">
+        <p data-lang-key="plaquesOverviewP1">Plaques Enseignes is a French manufacturer of custom signage — door plates, nameplates, laser-engraved plaques for professionals and individuals. The existing system was a patchwork of outdated tools that couldn't handle the volume of custom orders they were receiving.</p>
+        <p data-lang-key="plaquesOverviewP2">The goal was to build a complete e-commerce experience from scratch: a platform where clients could configure their product in real-time (dimensions, materials, engravings, fonts), get an instant price, and place an order — all without any back-and-forth with the sales team.</p>
+      </div>
+    </div>
+    <div class="case-stats">
+      <div class="case-stat-block">
+        <span class="case-stat">10K+</span>
+        <span class="case-stat-label" data-lang-key="plaquesStat1Label">Clients served</span>
+      </div>
+      <div class="case-stat-block">
+        <span class="case-stat">200+</span>
+        <span class="case-stat-label" data-lang-key="plaquesStat2Label">Product combinations</span>
+      </div>
+      <div class="case-stat-block">
+        <span class="case-stat">0</span>
+        <span class="case-stat-label" data-lang-key="plaquesStat3Label">Manual quotes needed</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Screenshots grid -->
+  <div class="case-screenshot-grid" style="margin: 0; gap: 2px;">
+    <div class="case-screenshot" style="margin: 0; border-radius: 0; aspect-ratio: 4/3; background: #1a1a1a;">
+      <span class="case-screenshot-placeholder" style="color:white;">Screenshot — Product catalogue</span>
+    </div>
+    <div class="case-screenshot" style="margin: 0; border-radius: 0; aspect-ratio: 4/3; background: #111;">
+      <span class="case-screenshot-placeholder" style="color:white;">Screenshot — Live configurator</span>
+    </div>
+  </div>
+
+  <!-- Challenge -->
+  <div class="case-section">
+    <span class="case-section-label" data-lang-key="csLabel2">(02) — Challenge</span>
+    <div class="case-section-grid">
+      <h2 class="case-section-title" data-lang-key="csSolving">What needed solving</h2>
+      <div class="case-section-body">
+        <p data-lang-key="plaquesChallP1">The core complexity was the configurator. Each product type has its own combination of variables — material, size, finish, engraving type, font, text content — with dynamic pricing that changes in real time. Building a UI that makes this feel simple to the end customer, while handling hundreds of possible configurations under the hood, required careful UX thinking and solid backend architecture.</p>
+        <p data-lang-key="plaquesChallP2">On top of this, the order management side needed to be built for the internal team: a dashboard to track orders, manage production status, and export data for their manufacturing workflow. Two interfaces, two user types, one codebase.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features -->
+  <div class="case-section">
+    <span class="case-section-label" data-lang-key="csLabel3">(03) — Key features</span>
+    <div class="case-features">
+      <div class="case-feature">
+        <span class="case-feature-num">01</span>
+        <h3 class="case-feature-title" data-lang-key="plaquesF1Title">Live configurator</h3>
+        <p class="case-feature-desc" data-lang-key="plaquesF1Desc">Real-time product preview as customers select dimensions, materials, finishes and engravings — price updates instantly with each change.</p>
+      </div>
+      <div class="case-feature">
+        <span class="case-feature-num">02</span>
+        <h3 class="case-feature-title" data-lang-key="plaquesF2Title">Laser engraving options</h3>
+        <p class="case-feature-desc" data-lang-key="plaquesF2Desc">Custom text input with font selection and live preview of the engraving on the product — what you see is what gets manufactured.</p>
+      </div>
+      <div class="case-feature">
+        <span class="case-feature-num">03</span>
+        <h3 class="case-feature-title" data-lang-key="plaquesF3Title">Order management</h3>
+        <p class="case-feature-desc" data-lang-key="plaquesF3Desc">Internal dashboard for tracking production, managing order status, and exporting manufacturing data — replacing three separate tools.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Screenshot detail -->
+  <div class="case-screenshot" style="margin: 0; border-radius: 0; background: #111;">
+    <span class="case-screenshot-placeholder" style="color:white;">Screenshot — Order management dashboard</span>
+  </div>
+
+  <!-- Stack -->
+  <div class="case-section">
+    <span class="case-section-label" data-lang-key="csLabel4">(04) — Tech stack</span>
+    <div class="case-stack-grid">
+      <div class="case-stack-item">
+        <span class="case-stack-item-name">PHP</span>
+        <span class="case-stack-item-role">Backend</span>
+      </div>
+      <div class="case-stack-item">
+        <span class="case-stack-item-name">MySQL</span>
+        <span class="case-stack-item-role" data-lang-key="csRoleDatabase">Database</span>
+      </div>
+      <div class="case-stack-item">
+        <span class="case-stack-item-name">JavaScript</span>
+        <span class="case-stack-item-role">Frontend</span>
+      </div>
+      <div class="case-stack-item">
+        <span class="case-stack-item-name">WordPress</span>
+        <span class="case-stack-item-role">CMS</span>
+      </div>
+      <div class="case-stack-item">
+        <span class="case-stack-item-name">WooCommerce</span>
+        <span class="case-stack-item-role">E-commerce</span>
+      </div>
+      <div class="case-stack-item">
+        <span class="case-stack-item-name">Figma</span>
+        <span class="case-stack-item-role">Design</span>
+      </div>
+      <div class="case-stack-item">
+        <span class="case-stack-item-name">GSAP</span>
+        <span class="case-stack-item-role">Animation</span>
+      </div>
+      <div class="case-stack-item" style="border-right:none;">
+        <span class="case-stack-item-name">OVH</span>
+        <span class="case-stack-item-role" data-lang-key="csRoleHosting">Hosting</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="case-cta">
+    <h2 class="case-cta-title" data-lang-key="csSeeLive">See it<br>live</h2>
+    <div class="case-cta-links">
+      <a href="https://www.plaques-enseignes.fr/" target="_blank" class="case-cta-link" data-lang-key="csVisit">Visit the site →</a>
+      <a href="projects.html" class="case-cta-link case-back" data-lang-key="csBack">← Back to projects</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-glow"></div>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <h2 class="footer-headline">AVAILABLE FOR<br>NEW PROJECTS</h2>
+        <nav class="footer-nav">
+          <span class="footer-col-label">MENU</span>
+          <a href="index.html">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About</a>
+        </nav>
+        <div class="footer-socials">
+          <span class="footer-col-label">SOCIALS</span>
+          <a href="mailto:theo@sauval.dev">Email</a>
+          <a href="https://www.instagram.com/thvsl__/" target="_blank">Instagram</a>
+          <a href="https://www.linkedin.com/in/theo-sauval-402884244/" target="_blank">LinkedIn</a>
+          <a href="https://github.com/TheoSauval" target="_blank">GitHub</a>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <span>© 2026 THEO SAUVAL</span>
+        <span>LILLE — FR</span>
+      </div>
+    </div>
+    <div class="footer-wordmark">THEO SAUVAL</div>
+  </footer>
+
+  <div id="service-preview"><img id="service-preview-img" src="" alt=""></div>
+  <div id="lang-overlay"></div>
+  <div id="cursor"></div>
+  <div id="cursor-image"><img id="cursor-img" src="" alt=""></div>
+
+  <script src="js/loader.js"></script>
+  <script src="js/effects.js" defer></script>
+  <script src="js/lang.js" defer></script>
+</body>
+
+</html>

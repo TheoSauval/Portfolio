@@ -1,8 +1,0 @@
-/* styles/global.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-.bg-site {
-  @apply bg-stone-950; /* Remplacez bg-blue-500 par la couleur de votre choix */
-}

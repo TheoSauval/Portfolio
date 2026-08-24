@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — Theo Sauval</title>
+  <meta name="description" content="Services by Theo Sauval — artistic direction, UI design, Figma prototypes, GSAP animations.">
+  <meta property="og:title" content="Services — Theo Sauval">
+  <meta property="og:description" content="Artistic direction, UI design, Figma prototypes, GSAP animations.">
+  <meta property="og:image" content="https://theosauval.com/assets/theo.jpeg">
+  <meta property="og:url" content="https://theosauval.com/services">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://theosauval.com/services">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .services-page {
+      background-color: #edeae7;
+    }
+
+    .services-page-hero {
+      position: relative;
+      z-index: 2;
+      min-height: calc(100vh - 55px);
+      padding: 4rem;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: #edeae7;
+    }
+
+    .services-page-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .services-page-label {
+      font-size: 0.7rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: rgba(0,0,0,0.35);
+    }
+
+    .services-page-title {
+      font-size: clamp(5rem, 10vw, 12rem);
+      font-weight: 900;
+      color: #000;
+      line-height: 0.85;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .services-page-title em {
+      font-family: 'Wagon', serif;
+      font-style: italic;
+      font-weight: 400;
+      color: #C9A96E;
+    }
+
+    .services-page-bottom {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .services-page-intro {
+      font-family: monospace;
+      font-size: 0.85rem;
+      line-height: 1.9;
+      color: rgba(0,0,0,0.5);
+      text-transform: none;
+      letter-spacing: 0.5px;
+      max-width: 340px;
+      margin: 0;
+      text-align: right;
+    }
+
+    .services-detail {
+      position: relative;
+      z-index: 2;
+      background-color: #000;
+    }
+
+    .service-detail-item {
+      display: grid;
+      grid-template-columns: 80px 1fr 1fr;
+      gap: 4rem;
+      padding: 4rem;
+      border-top: 1px solid rgba(237,234,231,0.08);
+      align-items: start;
+      transition: background 0.3s ease;
+    }
+
+    .service-detail-item:hover {
+      background-color: rgba(237,234,231,0.03);
+    }
+
+    .service-detail-num {
+      font-size: 0.7rem;
+      letter-spacing: 4px;
+      color: rgba(237,234,231,0.25);
+      padding-top: 0.3rem;
+    }
+
+    .service-detail-name {
+      font-size: clamp(2rem, 3.5vw, 4rem);
+      font-weight: 900;
+      color: #edeae7;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      line-height: 0.9;
+      margin: 0;
+    }
+
+    .service-detail-right {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding-top: 0.5rem;
+    }
+
+    .service-detail-desc {
+      font-family: monospace;
+      font-size: 0.8rem;
+      color: rgba(237,234,231,0.5);
+      line-height: 1.9;
+      text-transform: none;
+      letter-spacing: 0.5px;
+      margin: 0;
+    }
+
+    .service-detail-deliverables {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .service-deliverable {
+      font-size: 0.6rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(237,234,231,0.35);
+      border: 1px solid rgba(237,234,231,0.12);
+      padding: 0.3rem 0.8rem;
+    }
+
+    .services-cta {
+      position: relative;
+      z-index: 2;
+      background-color: #000;
+      padding: 6rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 100vh;
+    }
+
+    .services-cta h2 {
+      font-size: clamp(2rem, 4vw, 4rem);
+      font-weight: 900;
+      color: #edeae7;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      line-height: 1;
+      margin: 0;
+    }
+
+    .services-cta-link {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #edeae7;
+      text-decoration: none;
+      border-bottom: 1px solid #edeae7;
+      padding-bottom: 0.3rem;
+      white-space: nowrap;
+      transition: opacity 0.2s ease;
+    }
+
+    .services-cta-link:hover {
+      opacity: 0.6;
+    }
+
+    @media (max-width: 1024px) {
+      .services-page-hero {
+        padding: 3rem 2.5rem;
+      }
+
+      .service-detail-item {
+        padding: 3rem 2.5rem;
+        gap: 2.5rem;
+      }
+
+      .services-cta {
+        padding: 4rem 2.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .services-page-hero {
+        padding: 2rem 1.2rem;
+      }
+
+      .services-page-title {
+        font-size: clamp(4rem, 14vw, 8rem);
+      }
+
+      .services-page-bottom {
+        justify-content: flex-start;
+      }
+
+      .services-page-intro {
+        text-align: left;
+        max-width: 100%;
+        width: 100%;
+        overflow-wrap: break-word;
+      }
+
+      .service-detail-item {
+        grid-template-columns: 1fr;
+        padding: 2.5rem 1.2rem;
+        gap: 1.5rem;
+      }
+
+      .service-detail-num {
+        padding-top: 0;
+      }
+
+      .service-detail-desc {
+        overflow-wrap: break-word;
+        width: 100%;
+      }
+
+      .services-cta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2.5rem;
+        padding: 4rem 1.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .services-page-title {
+        font-size: clamp(3.5rem, 13vw, 6rem);
+      }
+
+      .service-detail-item {
+        padding: 2rem 1.2rem;
+      }
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="js/menu.js" defer></script>
+</head>
+
+<body class="services-page">
+
+  <div id="loader">
+    <div class="loader-top">
+      <span id="loader-num">(0)</span>
+      <span id="loader-time"></span>
+    </div>
+    <div class="loader-bottom">
+      <span class="loader-name">Theo Sauval</span>
+      <span class="loader-role">Creative Developer</span>
+    </div>
+  </div>
+
+  <nav>
+    <div class="name">Theo Sauval</div>
+    <div class="year">[2026]</div>
+    <div id="lang-toggle" class="nav-link">FR</div>
+    <div id="menu-trigger" class="nav-link">Menu</div>
+  </nav>
+
+  <div id="expanded-menu">
+    <div id="sub-menu" class="content">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <div class="mail_insta">
+        <a href="mailto:theo@sauval.dev">theo@sauval.dev</a>
+        <a href="https://www.instagram.com/thvsl__/" target="_blank">Instagram</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="services-page-hero">
+    <div class="services-page-top">
+      <span class="services-page-label">(Services)</span>
+    </div>
+    <h1 class="services-page-title">What<br>I <em>do</em></h1>
+    <div class="services-page-bottom">
+      <p class="services-page-intro">
+        From concept to deployment — design, development, and animation tailored to brands that care about craft.
+      </p>
+    </div>
+  </div>
+
+  <div class="services-detail">
+    <div class="service-detail-item">
+      <span class="service-detail-num">01</span>
+      <h2 class="service-detail-name">Direction<br>artistique</h2>
+      <div class="service-detail-right">
+        <p class="service-detail-desc">Defining the visual identity and creative direction of a project — color palettes, typography, visual language, and overall aesthetic consistency across all touchpoints.</p>
+        <div class="service-detail-deliverables">
+          <span class="service-deliverable">Moodboard</span>
+          <span class="service-deliverable">Style guide</span>
+          <span class="service-deliverable">Brand identity</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-detail-item">
+      <span class="service-detail-num">02</span>
+      <h2 class="service-detail-name">Design UI</h2>
+      <div class="service-detail-right">
+        <p class="service-detail-desc">Designing user interfaces that are both beautiful and functional — crafting every screen, component, and interaction with attention to usability and visual detail.</p>
+        <div class="service-detail-deliverables">
+          <span class="service-deliverable">Wireframes</span>
+          <span class="service-deliverable">UI design</span>
+          <span class="service-deliverable">Design system</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-detail-item">
+      <span class="service-detail-num">03</span>
+      <h2 class="service-detail-name">Maquettes<br>Figma</h2>
+      <div class="service-detail-right">
+        <p class="service-detail-desc">High-fidelity interactive prototypes in Figma — allowing you to visualise and test the experience before a single line of code is written.</p>
+        <div class="service-detail-deliverables">
+          <span class="service-deliverable">Prototype</span>
+          <span class="service-deliverable">Components</span>
+          <span class="service-deliverable">Interactive flows</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-detail-item">
+      <span class="service-detail-num">04</span>
+      <h2 class="service-detail-name">Animations<br>GSAP</h2>
+      <div class="service-detail-right">
+        <p class="service-detail-desc">Custom web animations using GSAP — scroll-triggered sequences, micro-interactions, page transitions, and anything that makes an interface feel alive and expressive.</p>
+        <div class="service-detail-deliverables">
+          <span class="service-deliverable">Scroll animations</span>
+          <span class="service-deliverable">Transitions</span>
+          <span class="service-deliverable">Micro-interactions</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="services-cta">
+    <h2>Ready to start<br>a project?</h2>
+    <a href="contact.html" class="services-cta-link">Get in touch →</a>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-glow"></div>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <h2 class="footer-headline">AVAILABLE FOR<br>NEW PROJECTS</h2>
+        <nav class="footer-nav">
+          <span class="footer-col-label">MENU</span>
+          <a href="index.html">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About</a>
+        </nav>
+        <div class="footer-socials">
+          <span class="footer-col-label">SOCIALS</span>
+          <a href="mailto:theo@sauval.dev">Email</a>
+          <a href="https://www.instagram.com/thvsl__/" target="_blank">Instagram</a>
+          <a href="https://www.linkedin.com/in/theo-sauval-402884244/" target="_blank">LinkedIn</a>
+          <a href="https://github.com/TheoSauval" target="_blank">GitHub</a>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <span>© 2026 THEO SAUVAL</span>
+        <span>LILLE — FR</span>
+      </div>
+    </div>
+    <div class="footer-wordmark">THEO SAUVAL</div>
+  </footer>
+
+  <div id="service-preview"><img id="service-preview-img" src="" alt=""></div>
+  <div id="lang-overlay"></div>
+  <div id="cursor"></div>
+  <div id="cursor-image"><img id="cursor-img" src="" alt=""></div>
+
+  <script src="js/loader.js"></script>
+  <script src="js/effects.js" defer></script>
+  <script src="js/lang.js" defer></script>
+</body>
+
+</html>

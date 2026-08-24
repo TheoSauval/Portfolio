@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Theo Sauval</title>
+  <meta name="description" content="Get in touch with Theo Sauval — available for new projects in web development, UI design and GSAP animation.">
+  <meta property="og:title" content="Contact — Theo Sauval">
+  <meta property="og:description" content="Available for new projects — web development, UI design, GSAP animation.">
+  <meta property="og:image" content="https://theosauval.com/assets/theo.jpeg">
+  <meta property="og:url" content="https://theosauval.com/contact">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://theosauval.com/contact">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    body {
+      background-color: #000;
+    }
+
+    .contact-hero {
+      position: relative;
+      z-index: 2;
+      min-height: calc(100vh - 55px);
+      background-color: #000;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 4rem;
+      box-sizing: border-box;
+    }
+
+    .contact-hero-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .contact-page-label {
+      font-size: 0.7rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: rgba(237,234,231,0.35);
+    }
+
+    .contact-availability {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(237,234,231,0.5);
+    }
+
+    .contact-availability-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: #6dff7a;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .contact-hero-title {
+      font-size: clamp(5rem, 11vw, 13rem);
+      font-weight: 900;
+      color: #edeae7;
+      line-height: 0.85;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+      margin: 0;
+      align-self: center;
+    }
+
+    .contact-hero-title em {
+      font-family: 'Wagon', serif;
+      font-style: italic;
+      font-weight: 400;
+      color: #C9A96E;
+    }
+
+    .contact-hero-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-top: 1px solid rgba(237,234,231,0.1);
+      padding-top: 2rem;
+    }
+
+    .contact-mail-link {
+      font-size: clamp(1rem, 2vw, 1.6rem);
+      font-weight: 700;
+      color: #edeae7;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: color 0.2s ease;
+    }
+
+    .contact-mail-link:hover {
+      color: #C9A96E;
+    }
+
+    .contact-socials {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .contact-socials a {
+      font-size: 0.75rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(237,234,231,0.5);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .contact-socials a:hover {
+      color: #edeae7;
+    }
+
+    .contact-form-section {
+      position: relative;
+      z-index: 2;
+      background-color: #edeae7;
+      padding: 6rem 4rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: start;
+      margin-bottom: 100vh;
+    }
+
+    .contact-form-left h2 {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      line-height: 1;
+      margin: 0 0 2rem 0;
+      color: #000;
+    }
+
+    .contact-form-left h2 em {
+      font-family: 'Wagon', serif;
+      font-style: italic;
+      font-weight: 400;
+      color: #C9A96E;
+    }
+
+    .contact-form-left p {
+      font-family: monospace;
+      font-size: 0.85rem;
+      line-height: 1.9;
+      color: rgba(0,0,0,0.6);
+      text-transform: none;
+      letter-spacing: 0.5px;
+      margin: 0;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .contact-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .contact-field label {
+      font-size: 0.65rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: rgba(0,0,0,0.35);
+    }
+
+    .contact-field input,
+    .contact-field textarea,
+    .contact-field select {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(0,0,0,0.2);
+      color: #000;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 0.95rem;
+      letter-spacing: 1px;
+      padding: 0.8rem 0;
+      outline: none;
+      width: 100%;
+      box-sizing: border-box;
+      transition: border-color 0.2s ease;
+      border-radius: 0;
+      -webkit-appearance: none;
+    }
+
+    .contact-field input:focus,
+    .contact-field textarea:focus,
+    .contact-field select:focus {
+      border-bottom-color: #C9A96E;
+    }
+
+    .contact-field textarea {
+      resize: none;
+      height: 120px;
+    }
+
+    .contact-field-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .contact-submit {
+      align-self: flex-start;
+      background: #000;
+      border: none;
+      color: #edeae7;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      padding: 1.2rem 2.5rem;
+      cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease;
+      margin-top: 0.5rem;
+    }
+
+    .contact-submit:hover {
+      background: #C9A96E;
+      color: #000;
+    }
+
+    @media (max-width: 1024px) {
+      .contact-hero {
+        padding: 3rem 2.5rem;
+      }
+
+      .contact-form-section {
+        padding: 4rem 2.5rem;
+        gap: 4rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .contact-hero {
+        padding: 2rem 1.2rem;
+      }
+
+      .contact-hero-title {
+        font-size: clamp(4rem, 18vw, 9rem);
+      }
+
+      .contact-hero-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+      }
+
+      .contact-socials {
+        gap: 1.5rem;
+      }
+
+      .contact-form-section {
+        grid-template-columns: 1fr;
+        padding: 4rem 1.2rem;
+        gap: 3rem;
+      }
+
+      .contact-form-left p {
+        overflow-wrap: break-word;
+        width: 100%;
+      }
+
+      .contact-field-row {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .contact-hero {
+        padding: 1.5rem 1.2rem;
+      }
+
+      .contact-hero-title {
+        font-size: clamp(3.5rem, 16vw, 7rem);
+      }
+
+      .contact-hero-top {
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="js/menu.js" defer></script>
+</head>
+
+<body>
+
+  <div id="loader">
+    <div class="loader-top">
+      <span id="loader-num">(0)</span>
+      <span id="loader-time"></span>
+    </div>
+    <div class="loader-bottom">
+      <span class="loader-name">Theo Sauval</span>
+      <span class="loader-role">Creative Developer</span>
+    </div>
+  </div>
+
+  <nav>
+    <div class="name">Theo Sauval</div>
+    <div class="year">[2026]</div>
+    <div id="lang-toggle" class="nav-link">FR</div>
+    <div id="menu-trigger" class="nav-link">Menu</div>
+  </nav>
+
+  <div id="expanded-menu">
+    <div id="sub-menu" class="content">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <div class="mail_insta">
+        <a href="mailto:theo@sauval.dev">theo@sauval.dev</a>
+        <a href="https://www.instagram.com/thvsl__/" target="_blank">Instagram</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-hero">
+    <div class="contact-hero-top">
+      <span class="contact-page-label">(Contact)</span>
+      <div class="contact-availability">
+        <span class="contact-availability-dot"></span>
+        <span class="contact-avail-text">Available</span>
+      </div>
+    </div>
+
+    <h1 class="contact-hero-title">Let's<br><em>talk</em></h1>
+
+    <div class="contact-hero-bottom">
+      <a href="mailto:theo@sauval.dev" class="contact-mail-link">theo@sauval.dev</a>
+      <div class="contact-socials">
+        <a href="https://www.instagram.com/thvsl__/" target="_blank">Instagram</a>
+        <a href="https://www.linkedin.com/in/theo-sauval-402884244/" target="_blank">LinkedIn</a>
+          <a href="https://github.com/TheoSauval" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-form-section">
+    <div class="contact-form-left">
+      <h2>Start a<br><em>project</em></h2>
+      <p>
+        Looking for a creative developer for your next project? Fill in the form and I'll get back to you within 24 hours.<br><br>
+        Based in Lille — available remotely worldwide.
+      </p>
+    </div>
+
+    <form class="contact-form" action="https://formspree.io/f/maqkrndp" method="POST">
+      <div class="contact-field-row">
+        <div class="contact-field">
+          <label for="firstname">First name</label>
+          <input type="text" id="firstname" name="firstname" autocomplete="off">
+        </div>
+        <div class="contact-field">
+          <label for="lastname">Last name</label>
+          <input type="text" id="lastname" name="lastname" autocomplete="off">
+        </div>
+      </div>
+      <div class="contact-field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" autocomplete="off">
+      </div>
+      <div class="contact-field">
+        <label for="subject">Subject</label>
+        <select id="subject" name="subject">
+          <option value="" disabled selected>Select a subject…</option>
+          <option value="website">Website creation</option>
+          <option value="design">UI / Visual design</option>
+          <option value="animation">GSAP animation</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="contact-field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message"></textarea>
+      </div>
+      <button type="submit" class="contact-submit">Send →</button>
+    </form>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-glow"></div>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <h2 class="footer-headline">AVAILABLE FOR<br>NEW PROJECTS</h2>
+        <nav class="footer-nav">
+          <span class="footer-col-label">MENU</span>
+          <a href="index.html">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About</a>
+        </nav>
+        <div class="footer-socials">
+          <span class="footer-col-label">SOCIALS</span>
+          <a href="mailto:theo@sauval.dev">Email</a>
+          <a href="https://www.instagram.com/thvsl__/" target="_blank">Instagram</a>
+          <a href="https://www.linkedin.com/in/theo-sauval-402884244/" target="_blank">LinkedIn</a>
+          <a href="https://github.com/TheoSauval" target="_blank">GitHub</a>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <span>© 2026 THEO SAUVAL</span>
+        <span>LILLE — FR</span>
+      </div>
+    </div>
+    <div class="footer-wordmark">THEO SAUVAL</div>
+  </footer>
+
+  <div id="service-preview"><img id="service-preview-img" src="" alt=""></div>
+  <div id="lang-overlay"></div>
+  <div id="cursor"></div>
+  <div id="cursor-image"><img id="cursor-img" src="" alt=""></div>
+
+  <script src="js/loader.js"></script>
+  <script src="js/effects.js" defer></script>
+  <script src="js/lang.js" defer></script>
+</body>
+
+</html>
