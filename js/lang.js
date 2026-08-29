@@ -18,18 +18,18 @@ const t = {
 
     // Projects section (index)
     projectsH:    'PROJECTS',
-    p1Desc:       'Real estate platform for new property acquisition — design and development of a showcase website with programme listings, appointment booking, and content management.',
+    p1Desc:       'Real estate platform for new property acquisition. Design and development of a showcase website with programme listings, appointment booking, and content management.',
     p1Link:       'Visit →',
-    p2Desc:       'Custom signage manufacturer — development of an e-commerce platform with a live product configurator, laser engraving options, and order management. 10,000+ clients served.',
+    p2Desc:       'Custom signage manufacturer. Development of an e-commerce platform with a live product configurator, laser engraving options, and order management. 10,000+ clients served.',
     p2Link:       'Visit →',
     indexProjectTeaser: 'More<br>coming soon',
 
     // About bio section (index)
-    bioTitle:     'What happens when a CS student becomes obsessed with making the web feel alive?',
-    bio1:         'Things move, and they move fast.',
-    bio2:         "Theo never settled for just building things that work. From his first lines of code to crafting production-ready platforms serving thousands of users, he's always been driven by the intersection of engineering precision and visual impact.",
-    bio3:         'Five years of computer science sharpened his instincts for systems and structure. But it\'s the creative side — the animations, the interfaces, the moments that make someone pause and think "how did they do that" — that keeps him going.',
-    bio4:         'Today he builds for brands and businesses that care about craft. Fast, clean, expressive — and always with a bit of F1 energy behind it.',
+    bioTitle:     'Developer. A bit of a designer. Always tinkering with some animation.',
+    bio1:         'It started with code that works.',
+    bio2:         "Then came the urge to make that code good to use, not just functional. Five years into a computer science degree, that's still what drives me.",
+    bio3:         "Systems, structure, logic: that's the foundation. Interfaces, animations, the small details: that's the part I like most.",
+    bio4:         'I design and build websites for brands who want something polished, not generic.',
 
     // About page (about.html)
     aboutPageLabel:  '(About)',
@@ -47,11 +47,11 @@ const t = {
 
     // Services page (services.html)
     servicesPageTitle: 'What<br>I <em>do</em>',
-    servicesPageIntro: 'From concept to deployment — design, development, and animation tailored to brands that care about craft.',
-    s1Desc: 'Defining the visual identity and creative direction of a project — color palettes, typography, visual language, and overall aesthetic consistency across all touchpoints.',
-    s2Desc: 'Designing user interfaces that are both beautiful and functional — crafting every screen, component, and interaction with attention to usability and visual detail.',
-    s3Desc: 'High-fidelity interactive prototypes in Figma — allowing you to visualise and test the experience before a single line of code is written.',
-    s4Desc: 'Custom web animations using GSAP — scroll-triggered sequences, micro-interactions, page transitions, and anything that makes an interface feel alive and expressive.',
+    servicesPageIntro: 'From concept to deployment: design, development, and animation tailored to brands that care about craft.',
+    s1Desc: 'Defining the visual identity and creative direction of a project: color palettes, typography, visual language, and overall aesthetic consistency across all touchpoints.',
+    s2Desc: 'Designing user interfaces that are both beautiful and functional: crafting every screen, component, and interaction with attention to usability and visual detail.',
+    s3Desc: 'High-fidelity interactive prototypes in Figma, allowing you to visualise and test the experience before a single line of code is written.',
+    s4Desc: 'Custom web animations using GSAP: scroll-triggered sequences, micro-interactions, page transitions, and anything that makes an interface feel alive and expressive.',
     servicesCTATitle: 'Ready to start<br>a project?',
     servicesCTALink:  'Get in touch →',
 
@@ -59,7 +59,7 @@ const t = {
     contactAvailText:  'Available for projects',
     contactHeroTitle:  "Let's<br><em>talk</em>",
     contactFormTitle:  'Start a<br><em>project</em>',
-    contactFormDesc:   "Looking for a creative developer for your next project? Fill in the form and I'll get back to you within 24 hours.<br><br>Based in Lille — available remotely worldwide.",
+    contactFormDesc:   "Looking for a creative developer for your next project? Fill in the form and I'll get back to you within 24 hours.<br><br>Based in Lille, available remotely worldwide.",
 
     // Contact & projects form (shared)
     ctaFirst:   'First name',
@@ -78,7 +78,7 @@ const t = {
     projectsPageTitle: '<em>All</em> work',
     projectsTeaser:    'More projects coming soon',
     ctaTitle:   "Let's work<br>together!",
-    ctaDesc:    'Have a project in mind? Fill in the form and I\'ll get back to you within 24 hours.<br><br>Based in Lille — available remotely worldwide.',
+    ctaDesc:    'Have a project in mind? Fill in the form and I\'ll get back to you within 24 hours.<br><br>Based in Lille, available remotely worldwide.',
     projectFullLink: 'Visit the site →',
 
     // Footer
@@ -116,30 +116,30 @@ const t = {
     csRoleHosting:    'Hosting',
 
     // ── VAN case study ────────────────────────────────────────
-    vanHeroDesc:     'Real estate platform for new property acquisition — design and development of a showcase website with programme listings, appointment booking, and content management.',
-    vanOverviewP1:   'Votre Appart Neuf is a real estate agency specialising in new-build property acquisition in France. They needed a complete digital presence — from brand identity to a fully functional platform — to present their property programmes and connect with buyers.',
+    vanHeroDesc:     'Real estate platform for new property acquisition. Design and development of a showcase website with programme listings, appointment booking, and content management.',
+    vanOverviewP1:   'Votre Appart Neuf is a real estate agency specialising in new-build property acquisition in France. They needed a complete digital presence, from brand identity to a fully functional platform, to present their property programmes and connect with buyers.',
     vanOverviewP2:   'The challenge was to build something that felt premium and trustworthy in a market where most competitors have outdated, cluttered interfaces. The platform had to be fast, easy to navigate, and capable of handling dynamic content without a developer needing to update it daily.',
-    vanChallengeP1:  'Real estate websites typically suffer from information overload — too many filters, too much text, poor visual hierarchy. The goal here was to strip everything back and let the property programmes speak for themselves.',
-    vanChallengeP2:  'On the technical side, the client needed a content management system they could actually use — adding new programmes, updating availability, and managing appointment requests — without touching a line of code. Integrating a headless CMS with a custom front-end while keeping performance high was the core engineering challenge.',
+    vanChallengeP1:  'Real estate websites typically suffer from information overload: too many filters, too much text, poor visual hierarchy. The goal here was to strip everything back and let the property programmes speak for themselves.',
+    vanChallengeP2:  'On the technical side, the client needed a content management system they could actually use: adding new programmes, updating availability, and managing appointment requests, without touching a line of code. Building a custom back-office connected to the front-end, while keeping performance high, was the core engineering challenge.',
     vanF1Title:      'Programme listings',
-    vanF1Desc:       'Dynamic property catalogue with filtering by location, type and availability — fully managed through the CMS.',
+    vanF1Desc:       'Dynamic property catalogue with filtering by location, type and availability, fully managed through the CMS.',
     vanF2Title:      'Appointment booking',
     vanF2Desc:       'Integrated booking system allowing prospects to schedule viewings directly from a programme page, with email confirmation.',
     vanF3Title:      'Content management',
-    vanF3Desc:       'Custom CMS dashboard giving the client full control over programmes, images, pricing and contact data — no developer needed.',
+    vanF3Desc:       'Custom CMS dashboard giving the client full control over programmes, images, pricing and contact data, no developer needed.',
 
     // ── Plaques case study ────────────────────────────────────
-    plaquesHeroDesc:    'Custom signage manufacturer — e-commerce platform with a live product configurator, laser engraving options, and order management. 10,000+ clients served.',
-    plaquesOverviewP1:  'Plaques Enseignes is a French manufacturer of custom signage — door plates, nameplates, laser-engraved plaques for professionals and individuals. The existing system was a patchwork of outdated tools that couldn\'t handle the volume of custom orders they were receiving.',
-    plaquesOverviewP2:  'The goal was to build a complete e-commerce experience from scratch: a platform where clients could configure their product in real-time (dimensions, materials, engravings, fonts), get an instant price, and place an order — all without any back-and-forth with the sales team.',
-    plaquesChallP1:     'The core complexity was the configurator. Each product type has its own combination of variables — material, size, finish, engraving type, font, text content — with dynamic pricing that changes in real time. Building a UI that makes this feel simple to the end customer, while handling hundreds of possible configurations under the hood, required careful UX thinking and solid backend architecture.',
+    plaquesHeroDesc:    'Custom signage manufacturer. E-commerce platform with a live product configurator, laser engraving options, and order management. 10,000+ clients served.',
+    plaquesOverviewP1:  'Plaques Enseignes is a French manufacturer of custom signage: door plates, nameplates, laser-engraved plaques for professionals and individuals. The existing system was a patchwork of outdated tools that couldn\'t handle the volume of custom orders they were receiving.',
+    plaquesOverviewP2:  'The goal was to build a complete e-commerce experience from scratch: a platform where clients could configure their product in real-time (dimensions, materials, engravings, fonts), get an instant price, and place an order, all without any back-and-forth with the sales team.',
+    plaquesChallP1:     'The core complexity was the configurator. Each product type has its own combination of variables: material, size, finish, engraving type, font, text content, with dynamic pricing that changes in real time. Building a UI that makes this feel simple to the end customer, while handling hundreds of possible configurations under the hood, required careful UX thinking and solid backend architecture.',
     plaquesChallP2:     'On top of this, the order management side needed to be built for the internal team: a dashboard to track orders, manage production status, and export data for their manufacturing workflow. Two interfaces, two user types, one codebase.',
     plaquesF1Title:     'Live configurator',
-    plaquesF1Desc:      'Real-time product preview as customers select dimensions, materials, finishes and engravings — price updates instantly with each change.',
+    plaquesF1Desc:      'Real-time product preview as customers select dimensions, materials, finishes and engravings, price updates instantly with each change.',
     plaquesF2Title:     'Laser engraving options',
-    plaquesF2Desc:      'Custom text input with font selection and live preview of the engraving on the product — what you see is what gets manufactured.',
+    plaquesF2Desc:      'Custom text input with font selection and live preview of the engraving on the product: what you see is what gets manufactured.',
     plaquesF3Title:     'Order management',
-    plaquesF3Desc:      'Internal dashboard for tracking production, managing order status, and exporting manufacturing data — replacing three separate tools.',
+    plaquesF3Desc:      'Internal dashboard for tracking production, managing order status, and exporting manufacturing data, replacing three separate tools.',
     plaquesStat1Label:  'Clients served',
     plaquesStat2Label:  'Product combinations',
     plaquesStat3Label:  'Manual quotes needed',
@@ -164,18 +164,18 @@ const t = {
 
     // Projects section (index)
     projectsH: 'PROJETS',
-    p1Desc:    "Plateforme immobilière pour l'acquisition de logements neufs — conception et développement d'un site vitrine avec listings de programmes, prise de rendez-vous et gestion de contenu.",
+    p1Desc:    "Plateforme immobilière pour l'acquisition de logements neufs. Conception et développement d'un site vitrine avec listings de programmes, prise de rendez-vous et gestion de contenu.",
     p1Link:    'Visiter →',
-    p2Desc:    "Fabricant d'enseignes personnalisées — développement d'une plateforme e-commerce avec configurateur produit en direct, options de gravure laser et gestion des commandes. Plus de 10 000 clients.",
+    p2Desc:    "Fabricant d'enseignes personnalisées. Développement d'une plateforme e-commerce avec configurateur produit en direct, options de gravure laser et gestion des commandes. Plus de 10 000 clients.",
     p2Link:    'Visiter →',
     indexProjectTeaser: "Et d'autres<br>arrivent",
 
     // About bio section (index)
-    bioTitle: "Que se passe-t-il quand un étudiant en info devient obsédé par l'idée de donner vie au web ?",
-    bio1:     'Les choses bougent, et vite.',
-    bio2:     "Theo n'a jamais voulu se contenter de construire des choses qui fonctionnent. De ses premières lignes de code à la création de plateformes servant des milliers d'utilisateurs, il a toujours été animé par l'intersection de la précision technique et de l'impact visuel.",
-    bio3:     "Cinq ans d'informatique ont aiguisé ses instincts pour les systèmes et la structure. Mais c'est le côté créatif — les animations, les interfaces, les moments qui font dire « comment ils ont fait ça » — qui le fait avancer.",
-    bio4:     "Aujourd'hui, il crée pour des marques et des entreprises soucieuses de la qualité. Rapide, propre, expressif — et toujours avec un peu d'énergie F1 derrière.",
+    bioTitle: "Développeur. Un peu designer. Toujours en train de bidouiller une animation.",
+    bio1:     'Ça a commencé par du code qui marche.',
+    bio2:     "Puis par l'envie que ce code soit beau à utiliser, pas juste fonctionnel. Cinq ans d'études en info plus tard, c'est toujours ce qui me motive.",
+    bio3:     "Systèmes, structure, logique, c'est la base. Interfaces, animations, micro-détails, c'est la partie que je préfère.",
+    bio4:     "Je conçois et développe des sites pour des marques qui veulent un truc soigné, pas générique.",
 
     // About page (about.html)
     aboutPageLabel:  '(À propos)',
@@ -193,11 +193,11 @@ const t = {
 
     // Services page (services.html)
     servicesPageTitle: 'Ce que<br>je <em>fais</em>',
-    servicesPageIntro: "Du concept au déploiement — design, développement et animation sur-mesure pour des marques qui soignent leur image.",
-    s1Desc: "Définir l'identité visuelle et la direction créative d'un projet — palettes de couleurs, typographie, langage visuel et cohérence esthétique globale sur tous les supports.",
-    s2Desc: "Concevoir des interfaces utilisateur à la fois belles et fonctionnelles — en soignant chaque écran, composant et interaction avec une attention particulière à l'utilisabilité et au détail visuel.",
-    s3Desc: "Prototypes interactifs haute-fidélité sur Figma — pour visualiser et tester l'expérience avant d'écrire une seule ligne de code.",
-    s4Desc: "Animations web sur-mesure avec GSAP — séquences déclenchées au scroll, micro-interactions, transitions de pages et tout ce qui rend une interface vivante et expressive.",
+    servicesPageIntro: "Du concept au déploiement : design, développement et animation sur-mesure pour des marques qui soignent leur image.",
+    s1Desc: "Définir l'identité visuelle et la direction créative d'un projet : palettes de couleurs, typographie, langage visuel et cohérence esthétique globale sur tous les supports.",
+    s2Desc: "Concevoir des interfaces utilisateur à la fois belles et fonctionnelles : en soignant chaque écran, composant et interaction avec une attention particulière à l'utilisabilité et au détail visuel.",
+    s3Desc: "Prototypes interactifs haute-fidélité sur Figma, pour visualiser et tester l'expérience avant d'écrire une seule ligne de code.",
+    s4Desc: "Animations web sur-mesure avec GSAP : séquences déclenchées au scroll, micro-interactions, transitions de pages et tout ce qui rend une interface vivante et expressive.",
     servicesCTATitle: 'Prêt à démarrer<br>un projet ?',
     servicesCTALink:  'Me contacter →',
 
@@ -205,7 +205,7 @@ const t = {
     contactAvailText:  'Disponible pour des projets',
     contactHeroTitle:  'On<br><em>discute</em> ?',
     contactFormTitle:  'Démarrer un<br><em>projet</em>',
-    contactFormDesc:   "À la recherche d'un développeur créatif pour votre prochain projet ? Remplis le formulaire et je te réponds sous 24h.<br><br>Basé à Lille — disponible à distance partout dans le monde.",
+    contactFormDesc:   "À la recherche d'un développeur créatif pour votre prochain projet ? Remplis le formulaire et je te réponds sous 24h.<br><br>Basé à Lille, disponible à distance partout dans le monde.",
 
     // Contact & projects form (shared)
     ctaFirst:   'Prénom',
@@ -224,7 +224,7 @@ const t = {
     projectsPageTitle: '<em>Tous</em> les projets',
     projectsTeaser:    "D'autres projets arrivent",
     ctaTitle:   'Travaillons<br>ensemble !',
-    ctaDesc:    'Un projet en tête ? Remplis le formulaire et je te réponds sous 24h.<br><br>Basé à Lille — disponible à distance.',
+    ctaDesc:    'Un projet en tête ? Remplis le formulaire et je te réponds sous 24h.<br><br>Basé à Lille, disponible à distance.',
     projectFullLink: 'Voir le site →',
 
     // Footer
@@ -262,37 +262,37 @@ const t = {
     csRoleHosting:    'Hébergement',
 
     // ── VAN case study ────────────────────────────────────────
-    vanHeroDesc:     'Plateforme immobilière pour l\'acquisition de logements neufs — conception et développement d\'un site vitrine avec listings de programmes, prise de rendez-vous et gestion de contenu.',
-    vanOverviewP1:   'Votre Appart Neuf est une agence immobilière spécialisée dans l\'acquisition de logements neufs en France. Ils avaient besoin d\'une présence digitale complète — de l\'identité visuelle à une plateforme entièrement fonctionnelle — pour présenter leurs programmes immobiliers et entrer en contact avec les acheteurs.',
+    vanHeroDesc:     'Plateforme immobilière pour l\'acquisition de logements neufs. Conception et développement d\'un site vitrine avec listings de programmes, prise de rendez-vous et gestion de contenu.',
+    vanOverviewP1:   'Votre Appart Neuf est une agence immobilière spécialisée dans l\'acquisition de logements neufs en France. Ils avaient besoin d\'une présence digitale complète, de l\'identité visuelle à une plateforme entièrement fonctionnelle, pour présenter leurs programmes immobiliers et entrer en contact avec les acheteurs.',
     vanOverviewP2:   'L\'enjeu était de construire quelque chose qui dégage un sentiment premium et inspire confiance, dans un marché où la plupart des concurrents ont des interfaces dépassées et surchargées. La plateforme devait être rapide, facile à naviguer, et capable de gérer du contenu dynamique sans qu\'un développeur soit nécessaire au quotidien.',
-    vanChallengeP1:  'Les sites immobiliers souffrent généralement d\'une surcharge d\'information — trop de filtres, trop de texte, une hiérarchie visuelle pauvre. L\'objectif était de tout épurer et de laisser les programmes immobiliers parler d\'eux-mêmes.',
-    vanChallengeP2:  'Côté technique, le client avait besoin d\'un système de gestion de contenu qu\'il pouvait réellement utiliser — ajouter de nouveaux programmes, mettre à jour les disponibilités, gérer les demandes de rendez-vous — sans toucher une ligne de code. Intégrer un CMS headless avec un front-end sur-mesure tout en maintenant des performances élevées était le défi technique principal.',
+    vanChallengeP1:  'Les sites immobiliers souffrent généralement d\'une surcharge d\'information : trop de filtres, trop de texte, une hiérarchie visuelle pauvre. L\'objectif était de tout épurer et de laisser les programmes immobiliers parler d\'eux-mêmes.',
+    vanChallengeP2:  'Côté technique, le client avait besoin d\'un système de gestion de contenu qu\'il pouvait réellement utiliser : ajouter de nouveaux programmes, mettre à jour les disponibilités, gérer les demandes de rendez-vous, sans toucher une ligne de code. Construire un back-office sur-mesure connecté au front-end, tout en maintenant des performances élevées, était le défi technique principal.',
     vanF1Title:      'Listings de programmes',
-    vanF1Desc:       'Catalogue immobilier dynamique avec filtrage par localisation, type et disponibilité — entièrement géré via le CMS.',
+    vanF1Desc:       'Catalogue immobilier dynamique avec filtrage par localisation, type et disponibilité, entièrement géré via le CMS.',
     vanF2Title:      'Prise de rendez-vous',
     vanF2Desc:       'Système de réservation intégré permettant aux prospects de planifier des visites directement depuis la page d\'un programme, avec confirmation par email.',
     vanF3Title:      'Gestion de contenu',
-    vanF3Desc:       'Dashboard CMS sur-mesure donnant au client un contrôle total sur les programmes, images, tarifs et données de contact — sans développeur.',
+    vanF3Desc:       'Dashboard CMS sur-mesure donnant au client un contrôle total sur les programmes, images, tarifs et données de contact, sans développeur.',
 
     // ── Plaques case study ────────────────────────────────────
-    plaquesHeroDesc:    'Fabricant d\'enseignes personnalisées — plateforme e-commerce avec configurateur produit en temps réel, options de gravure laser et gestion des commandes. Plus de 10 000 clients servis.',
-    plaquesOverviewP1:  'Plaques Enseignes est un fabricant français d\'enseignes personnalisées — plaques de porte, plaques nominatives, enseignes gravées au laser pour les professionnels et les particuliers. Le système existant était un assemblage d\'outils dépassés incapable de gérer le volume de commandes personnalisées reçues.',
-    plaquesOverviewP2:  'L\'objectif était de construire une expérience e-commerce complète de zéro : une plateforme où les clients pouvaient configurer leur produit en temps réel (dimensions, matériaux, gravures, polices), obtenir un prix instantané et passer commande — sans aucun échange avec l\'équipe commerciale.',
-    plaquesChallP1:     'La complexité centrale était le configurateur. Chaque type de produit a ses propres combinaisons de variables — matériau, taille, finition, type de gravure, police, texte — avec une tarification dynamique qui change en temps réel. Construire une interface qui rend tout cela simple pour le client final, tout en gérant des centaines de configurations possibles en coulisse, a nécessité une réflexion UX approfondie et une architecture backend solide.',
+    plaquesHeroDesc:    'Fabricant d\'enseignes personnalisées. Plateforme e-commerce avec configurateur produit en temps réel, options de gravure laser et gestion des commandes. Plus de 10 000 clients servis.',
+    plaquesOverviewP1:  'Plaques Enseignes est un fabricant français d\'enseignes personnalisées : plaques de porte, plaques nominatives, enseignes gravées au laser pour les professionnels et les particuliers. Le système existant était un assemblage d\'outils dépassés incapable de gérer le volume de commandes personnalisées reçues.',
+    plaquesOverviewP2:  'L\'objectif était de construire une expérience e-commerce complète de zéro : une plateforme où les clients pouvaient configurer leur produit en temps réel (dimensions, matériaux, gravures, polices), obtenir un prix instantané et passer commande, sans aucun échange avec l\'équipe commerciale.',
+    plaquesChallP1:     'La complexité centrale était le configurateur. Chaque type de produit a ses propres combinaisons de variables : matériau, taille, finition, type de gravure, police, texte, avec une tarification dynamique qui change en temps réel. Construire une interface qui rend tout cela simple pour le client final, tout en gérant des centaines de configurations possibles en coulisse, a nécessité une réflexion UX approfondie et une architecture backend solide.',
     plaquesChallP2:     'En parallèle, le côté gestion des commandes devait être conçu pour l\'équipe interne : un dashboard pour suivre les commandes, gérer le statut de production et exporter les données pour le workflow de fabrication. Deux interfaces, deux types d\'utilisateurs, une seule codebase.',
     plaquesF1Title:     'Configurateur en temps réel',
-    plaquesF1Desc:      'Aperçu produit en temps réel pendant que les clients sélectionnent dimensions, matériaux, finitions et gravures — le prix se met à jour instantanément à chaque changement.',
+    plaquesF1Desc:      'Aperçu produit en temps réel pendant que les clients sélectionnent dimensions, matériaux, finitions et gravures, le prix se met à jour instantanément à chaque changement.',
     plaquesF2Title:     'Options de gravure laser',
-    plaquesF2Desc:      'Saisie de texte personnalisé avec sélection de police et aperçu en direct de la gravure sur le produit — ce que vous voyez est ce qui est fabriqué.',
+    plaquesF2Desc:      'Saisie de texte personnalisé avec sélection de police et aperçu en direct de la gravure sur le produit : ce que vous voyez est ce qui est fabriqué.',
     plaquesF3Title:     'Gestion des commandes',
-    plaquesF3Desc:      'Dashboard interne pour le suivi de la production, la gestion du statut des commandes et l\'export des données de fabrication — remplaçant trois outils distincts.',
+    plaquesF3Desc:      'Dashboard interne pour le suivi de la production, la gestion du statut des commandes et l\'export des données de fabrication, remplaçant trois outils distincts.',
     plaquesStat1Label:  'Clients servis',
     plaquesStat2Label:  'Combinaisons produit',
     plaquesStat3Label:  'Devis manuel nécessaire',
   }
 };
 
-let currentLang = 'en';
+let currentLang = localStorage.getItem('lang') === 'fr' ? 'fr' : 'en';
 
 function sel(s) { return document.querySelector(s); }
 function selAll(s) { return document.querySelectorAll(s); }
@@ -424,6 +424,8 @@ function applyLang(lang) {
 
   document.getElementById('lang-toggle').textContent = _.langBtn;
   document.body.classList.toggle('lang-fr', lang === 'fr');
+  document.documentElement.lang = lang;
+  localStorage.setItem('lang', lang);
   currentLang = lang;
 }
 
@@ -438,3 +440,6 @@ document.getElementById('lang-toggle').addEventListener('click', () => {
     .to(overlay, { clipPath: 'inset(0 0 100% 0)', duration: 0.75, ease: 'power4.inOut', delay: 0.1 })
     .set(overlay, { visibility: 'hidden' });
 });
+
+// Apply the language saved from a previous page/visit immediately (no transition)
+if (currentLang === 'fr') applyLang('fr');

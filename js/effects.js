@@ -72,6 +72,32 @@ if (title) {
   window.buildTitleLetters();
 }
 
+// Hero photo — reveal from bottom to top once the loader clears
+const heroPhotoImg = document.querySelector('.hero-photo img');
+if (heroPhotoImg) {
+  gsap.set(heroPhotoImg, { yPercent: 100 });
+  const revealHeroPhoto = () => {
+    gsap.to(heroPhotoImg, { yPercent: 0, duration: 1.2, delay: 0.2, ease: 'power4.out' });
+  };
+  document.getElementById('loader')
+    ? document.addEventListener('loader:done', revealHeroPhoto, { once: true })
+    : revealHeroPhoto();
+}
+
+// Hero scroll indicator — bar sliding along the track
+const heroScrollBar = document.querySelector('.hero-scroll-bar');
+if (heroScrollBar) {
+  const trackHeight = heroScrollBar.parentElement.offsetHeight;
+  const barHeight = heroScrollBar.offsetHeight;
+  gsap.to(heroScrollBar, {
+    y: trackHeight - barHeight,
+    duration: 1.2,
+    ease: 'power1.inOut',
+    repeat: -1,
+    yoyo: true,
+  });
+}
+
 // Hover image/video follower
 const cursorImage = document.getElementById('cursor-image');
 const cursorImg = document.getElementById('cursor-img');
@@ -132,6 +158,14 @@ if (servicePreview) {
     item.addEventListener('mouseenter', () => {
       serviceItems.forEach(s => s.classList.remove('active'));
       item.classList.add('active');
+
+      if (!item.dataset.video && !item.dataset.image) {
+        gsap.killTweensOf(servicePreview, 'opacity,scale');
+        gsap.to(servicePreview, { opacity: 0, scale: 0.85, duration: 0.3, ease: 'power3.in', onComplete: () => {
+          if (servicePreviewVid) servicePreviewVid.pause();
+        }});
+        return;
+      }
 
       if (item.dataset.video) {
         servicePreviewImg.style.display = 'none';
@@ -218,7 +252,7 @@ document.querySelectorAll('.contact-form, .projects-contact-form').forEach(form 
         throw new Error();
       }
     } catch {
-      btn.textContent = 'Error — try again';
+      btn.textContent = 'Error, try again';
       setTimeout(() => { btn.textContent = original; btn.disabled = false; }, 3000);
     }
   });
